@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DNF面板计算器</title>
+</head>
+<body>
+<script>
+    var UA = isUserMobile();
+
+    console.log(UA);
+    if (UA) { // true=mobile false=pc
+        window.location.href = "./indexMobile.html";
+    } else {
+        window.location.href = "./indexPC.html";
+    }
+
+    function isUserMobile() {
+        const ua = navigator.userAgent.toLowerCase();
+        return /mobile|android|iphone|ipod|phone|ipad/i.test(ua);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DNF面板计算器</title>
+    <link href="./layui/css/layui.css" rel="stylesheet">
+    <link href="./css/background.css" rel="stylesheet">
+    <script src="js/rem.js" ></script>
+</head>
+<body>
+<script src="./layui/layui.js"></script>
+<script>
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer
+            ,form = layui.form;
+
+        // layer.msg('Hello World');
+    });
+</script>
+<div id="container" class="container">
+    <div class="layui-row" style="height: 100px; margin-bottom: 30px;">
+        <div class="layui-col-md12 colpadding colborder">
+            <i class="layui-icon layui-icon-tips" style="font-size: 100px; width: 8%; color: yellow;"></i>
+            <div id="warringInfo" class="panelDivbgWarring" style="float: right; height: 100%; width: 92%">说明提示区</div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <!-- 左边列 -->
+        <div class="layui-col-md3 colpadding colborder">
+            <div id="guild" class="panelDivbg" style="height: 400px;">
+                公会增益区
+            </div>
+            <div id="pet" class="panelDivbg" style="height: 300px;">
+                宠物增益区
+            </div>
+        </div>
+        <!-- 中间列 -->
+        <div class="layui-col-md6 colpadding colborder">
+            <div id="mainpanel" class="panelDivbg" style="height: 600px;">
+                面板计算区
+            </div>
+            <div class="layui-row">
+                <div class="layui-col-md6 colpadding">
+                    <div id="achievement" class="panelDivbg" style="height: 200px;">
+                        角色成就增益区
+                    </div>
+                </div>
+                <div class="layui-col-md6 colpadding">
+                    <div id="fashion" class="panelDivbg" style="height: 200px;">
+                        时装增益区
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右边列 -->
+        <div class="layui-col-md3 colpadding colborder">
+            <div id="equipment" class="panelDivbg" style="height: 400px;">
+                装备区
+            </div>
+            <div id="grow" class="panelDivbg" style="height: 300px;">
+                角色成长区
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
