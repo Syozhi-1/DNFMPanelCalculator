@@ -5,18 +5,10 @@
     <title>DNF面板计算器</title>
     <link href="./layui/css/layui.css" rel="stylesheet">
     <link href="./css/background.css" rel="stylesheet">
-    <script src="js/rem.js" ></script>
+    <script src="js/rem.js"></script>
 </head>
 <body>
 <script src="./layui/layui.js"></script>
-<script>
-    layui.use(['layer', 'form'], function(){
-        var layer = layui.layer
-            ,form = layui.form;
-
-        // layer.msg('Hello World');
-    });
-</script>
 <div id="container" class="container">
     <div class="layui-row" style="height: 100px; margin-bottom: 30px;">
         <div class="layui-col-md12 colpadding colborder">
@@ -29,8 +21,51 @@
     <div class="layui-row">
         <!-- 左边列 -->
         <div class="layui-col-md3 colpadding colborder">
-            <div id="guild" class="panelDivbg" style="height: 400px;">
-                公会增益区
+            <div id="guild" class="panelBroder" style="height: 400px;">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item guildPanelLevel panelBroder">
+                        <label class="layui-form-label">公会等级</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="guildLevel" value="1" title="1级" checked="" lay-filter="levelChange">
+                            <input type="radio" name="guildLevel" value="2" title="2级" lay-filter="levelChange">
+                            <input type="radio" name="guildLevel" value="3" title="3级" lay-filter="levelChange">
+                        </div>
+                    </div>
+                </form>
+                <div id="guildPersonalBuff" class="guildPanelLeft panelBroder" >
+                    <div class="guildPanelDetail">
+                        <label>力量</label><div id="guildPersonBuff_1" class="guildPersonSilder"></div><div id="guildPersonBuff_1_tip" class="guildSilderTip"></div>
+                    </div>
+                    <div class="guildPanelDetail">
+                        <label>体力</label><div id="guildPersonBuff_2" class="guildPersonSilder"></div><div id="guildPersonBuff_2_tip" class="guildSilderTip"></div>
+                    </div>
+                    <div class="guildPanelDetail">
+                        <label>智力</label><div id="guildPersonBuff_3" class="guildPersonSilder"></div><div id="guildPersonBuff_3_tip" class="guildSilderTip"></div>
+                    </div>
+                    <div class="guildPanelDetail">
+                        <label>精神</label><div id="guildPersonBuff_4" class="guildPersonSilder"></div><div id="guildPersonBuff_4_tip" class="guildSilderTip"></div>
+                    </div>
+                    <div class="guildPanelDetail">
+                        <label>精神</label><div id="guildPersonBuff_5" class="guildPersonSilder"></div><div id="guildPersonBuff_5_tip" class="guildSilderTip"></div>
+                    </div>
+                    <div class="guildPanelDetail">
+                        <label>精神</label><div id="guildPersonBuff_6" class="guildPersonSilder"></div><div id="guildPersonBuff_6_tip" class="guildSilderTip"></div>
+                    </div>
+                </div>
+                <div id="guildPersonalBuff" class="guildPanelRight panelBroder" >
+                    <div class="guildPanelDetail">
+                        <label>力量</label><div id="guildCommonBuff_1" class="guildCommonSilder"></div><div id="guildCommonBuff_1_tip" class="guildSilderTip"></div>
+                    </div>
+                    <div class="guildPanelDetail">
+                        <label>智力</label><div id="guildCommonBuff_2" class="guildCommonSilder"></div><div id="guildCommonBuff_2_tip" class="guildSilderTip"></div>
+                    </div>
+                    <div class="guildPanelDetail">
+                        <label>体力</label><div id="guildCommonBuff_3" class="guildCommonSilder"></div><div id="guildCommonBuff_3_tip" class="guildSilderTip"></div>
+                    </div>
+                    <div class="guildPanelDetail">
+                        <label>精神</label><div id="guildCommonBuff_4" class="guildCommonSilder"></div><div id="guildCommonBuff_4_tip" class="guildSilderTip"></div>
+                    </div>
+                </div>
             </div>
             <div id="pet" class="panelDivbg" style="height: 300px;">
                 宠物增益区
@@ -66,4 +101,5 @@
     </div>
 </div>
 </body>
+<script src="./js/guild.js"></script>
 </html>
