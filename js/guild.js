@@ -6,7 +6,7 @@ layui.use(['jquery', 'layer', 'slider', 'form', 'element'], function () {
 
     var guildLevel = $("input[name='guildLevel']:checked").val(); // 公会等级
     var guildPersonBuffArr = [0, 5, 2]; // 各个人增益数值
-    var guildPersonSPBuffArr = [0, 5, 2]; // 各个人特殊增益数值
+    var guildPersonSPBuffArr = [0, 3, 2]; // 各个人特殊增益数值
     var guildCommonBuffArr = []; // 各公共增益数值
     var maxPersonLevel = 7; // 个人增益最高等级
     var maxPersonSPLevel = 4; // 个人增益最高等级
@@ -21,12 +21,15 @@ layui.use(['jquery', 'layer', 'slider', 'form', 'element'], function () {
         // console.log(guildLevel);
         if (guildLevel === "2") {
             maxPersonLevel = 16;
+            maxPersonSPLevel = 7;
             maxCommonLevel = 2;
         } else if (guildLevel === "3") {
             maxPersonLevel = 26;
+            maxPersonSPLevel = 10;
             maxCommonLevel = 3;
         } else {
             maxPersonLevel = 7;
+            maxPersonSPLevel = 4;
             maxCommonLevel = 1;
         }
         initGuild();
