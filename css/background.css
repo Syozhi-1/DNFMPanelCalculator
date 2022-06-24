@@ -19,6 +19,8 @@ body {background-color: lightgrey;}
 
 /* 面板边框 */
 .panelBroder {border: 1px solid black;}
+/* 面板正式使用间隔 */
+.panelDivMargin{margin-bottom: 5px;}
 
 /* 面板统一背景布局 */
 .panelDivbg {
