@@ -1,0 +1,19 @@
+/* 公会面板样式 */
+/* 公会等级 */
+.guildPanelLevel {margin-top: 5px;margin-bottom: 5px;width: 100%;height: 20%;border: 1px solid black;font-size: 18px;}
+/* 公会增益左边（个人增益） */
+.guildPanelLeft {float: left;}
+/* 公会增益右边（公共增益） */
+.guildPanelRight {float: right;}
+.guildPanelLeft, .guildPanelRight {width: 49%;height: 86%;}
+.guildPanelLeft .guildPanelLeftTitle, .guildPanelRight .guildPanelRightTitle{width: 100%;height: 8%; text-align: center;}
+.guildPanelLeftInner::-webkit-scrollbar, .guildPanelRightInner::-webkit-scrollbar{display: none; /* Chrome Safari */}
+.guildPanelLeftInner, .guildPanelRightInner {width: 100%;height: 91%;display: flex;flex-direction: column;align-items: center;font-size: 15px;scrollbar-width: none; /* firefox */-ms-overflow-style: none; /* IE 10+ */overflow-x: hidden;overflow-y: auto;}
+/* 公会增益共用样式 */
+.guildPanelDetail{margin-top: 5px; height: 40px; width: 100%; display: flex;align-items: center; border: 1px solid black;}
+.guildPanelDetail label{float: left;width: 40%; text-align: center;}
+.guildPanelDetail .guildPersonSilder{float: left;width: 48%;}
+.guildPanelDetail .guildPersonSPSilder{float: left;width: 48%;}
+.guildPanelDetail .guildCommonSilder{float: left;width: 48%;}
+.guildPanelDetail .guildSilderTip{float: right; text-align: right; width: 10%;}
+
